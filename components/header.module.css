@@ -1,0 +1,12 @@
+.headline {
+	font-weight: 500;
+	color: var(--color-gray);
+	font-size: var(--spacing-24);
+	line-height: var(--spacing-32);
+}
+.subline {
+	font-weight: 500;
+	color: var(--color-gray);
+	font-size: var(--spacing-24);
+	color: var(--color-foreground);
+}
