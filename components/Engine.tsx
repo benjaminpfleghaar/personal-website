@@ -34,7 +34,7 @@ export default function Engine() {
 			Matter.Bodies.rectangle(windowWidth / 2, windowHeight + 25, windowWidth, 50, { isStatic: true }), // ground
 			Matter.Bodies.rectangle(-25, windowHeight / 2, 50, windowHeight * 2, { isStatic: true }), // left
 			Matter.Bodies.rectangle(windowWidth + 25, windowHeight / 2, 50, windowHeight * 2, { isStatic: true }), // right
-			Matter.Bodies.rectangle(160, windowHeight - 72, 320, 48, { isStatic: true }), // footer
+			Matter.Bodies.rectangle(146, windowHeight - 72, 294, 48, { isStatic: true }), // footer
 		]);
 
 		pills.current.forEach((pill) => {
