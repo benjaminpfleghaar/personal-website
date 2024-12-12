@@ -13,9 +13,9 @@ const links = [
 ];
 
 const apps = [
-	{ label: "Talea", href: "#" },
-	{ label: "Mintly", href: "#" },
-	{ label: "Flexikon", href: "#" },
+	{ label: "Talea", href: "https://github.com/benjaminpfleghaar/talea" },
+	{ label: "Mintly", href: "https://github.com/benjaminpfleghaar/mintly" },
+	{ label: "Flexikon", href: "https://github.com/benjaminpfleghaar/flexikon" },
 ];
 
 export default function Engine() {
@@ -30,7 +30,12 @@ export default function Engine() {
 		const windowWidth = window.innerWidth;
 		const windowHeight = window.innerHeight;
 
-		Matter.Composite.add(engine.current.world, [Matter.Bodies.rectangle(windowWidth / 2, windowHeight + 25, windowWidth, 50, { isStatic: true }), Matter.Bodies.rectangle(-25, windowHeight / 2, 50, windowHeight, { isStatic: true }), Matter.Bodies.rectangle(windowWidth + 25, windowHeight / 2, 50, windowHeight * 2, { isStatic: true })]);
+		Matter.Composite.add(engine.current.world, [
+			Matter.Bodies.rectangle(windowWidth / 2, windowHeight + 25, windowWidth, 50, { isStatic: true }), // ground
+			Matter.Bodies.rectangle(-25, windowHeight / 2, 50, windowHeight * 2, { isStatic: true }), // left
+			Matter.Bodies.rectangle(windowWidth + 25, windowHeight / 2, 50, windowHeight * 2, { isStatic: true }), // right
+			Matter.Bodies.rectangle(160, windowHeight - 72, 320, 48, { isStatic: true }), // footer
+		]);
 
 		pills.current.forEach((pill) => {
 			if (!pill) return;
@@ -124,6 +129,7 @@ export default function Engine() {
 					className={styles.link}
 					href={link.href}
 					title={link.label}
+					target="_blank"
 					ref={(element) => {
 						pills.current[index] = element;
 					}}>
@@ -136,6 +142,7 @@ export default function Engine() {
 					className={styles.app}
 					href={app.href}
 					title={app.label}
+					target="_blank"
 					ref={(element) => {
 						icons.current[index] = element;
 					}}>
