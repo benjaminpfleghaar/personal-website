@@ -1,7 +1,17 @@
 .main {
 	display: flex;
-	min-height: 100svh;
+	max-width: 900px;
 	flex-direction: column;
-	padding: var(--spacing-48);
-	justify-content: space-between;
+	gap: var(--spacing-24);
+	padding: var(--spacing-24);
+	justify-content: flex-start;
+}
+@media (min-width: 768px) {
+	.main {
+		min-height: 100svh;
+		padding: var(--spacing-48);
+		justify-content: space-between;
+	}
+}
+@media (min-width: 1280px) {
 }

@@ -30,6 +30,13 @@ img {
 	display: block;
 	max-width: 100%;
 }
+a {
+	text-decoration: none;
+}
+a:focus-visible {
+	outline-offset: 2px;
+	outline: 2px solid var(--color-foreground);
+}
 @media (prefers-color-scheme: dark) {
 	:root {
 		--color-gray: #8d8d8d;

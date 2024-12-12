@@ -34,7 +34,6 @@ export default function Engine() {
 			Matter.Bodies.rectangle(windowWidth / 2, windowHeight + 25, windowWidth, 50, { isStatic: true }), // ground
 			Matter.Bodies.rectangle(-25, windowHeight / 2, 50, windowHeight * 2, { isStatic: true }), // left
 			Matter.Bodies.rectangle(windowWidth + 25, windowHeight / 2, 50, windowHeight * 2, { isStatic: true }), // right
-			Matter.Bodies.rectangle(146, windowHeight - 72, 294, 48, { isStatic: true }), // footer
 		]);
 
 		pills.current.forEach((pill) => {
@@ -128,7 +127,7 @@ export default function Engine() {
 					key={link.label}
 					className={styles.link}
 					href={link.href}
-					title={link.label}
+					title={`Go to ${link.label}`}
 					target="_blank"
 					ref={(element) => {
 						pills.current[index] = element;
@@ -141,12 +140,12 @@ export default function Engine() {
 					key={app.label}
 					className={styles.app}
 					href={app.href}
-					title={app.label}
+					title={`Open ${app.label} app`}
 					target="_blank"
 					ref={(element) => {
 						icons.current[index] = element;
 					}}>
-					<Image src={`/images/${app.label.toLowerCase()}.svg`} width={96} height={96} alt={app.label} />
+					<Image src={`/images/${app.label.toLowerCase()}.svg`} width={96} height={96} alt={`App icon of ${app.label}`} />
 				</a>
 			))}
 		</>

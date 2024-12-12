@@ -8,7 +8,6 @@
 	position: absolute;
 	align-items: center;
 	border-radius: 32px;
-	text-decoration: none;
 	padding: 0 var(--spacing-24);
 	font-size: var(--spacing-40);
 	color: var(--color-background);
@@ -18,4 +17,5 @@
 	left: 0;
 	top: -96px;
 	position: absolute;
+	border-radius: 16px;
 }

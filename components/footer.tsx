@@ -7,13 +7,13 @@ export default function Footer() {
 			<nav>
 				<ul className={styles.list}>
 					<li>
-						<Link href="/" className={styles.link} title="Legal Notice">
-							Legal Notice
+						<Link href="/" className={styles.link} title="Go to Privacy Policy">
+							Privacy Policy
 						</Link>
 					</li>
 					<li>
-						<Link href="/" className={styles.link} title="Privacy Policy">
-							Privacy Policy
+						<Link href="/" className={styles.link} title="Go to Legal Notice">
+							Legal Notice
 						</Link>
 					</li>
 				</ul>
