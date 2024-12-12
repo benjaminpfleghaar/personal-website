@@ -13,15 +13,22 @@
 	--spacing-16: 1rem;
 	--spacing-24: 1.5rem;
 	--spacing-32: 2rem;
+	--spacing-40: 2.5rem;
 	--spacing-48: 3rem;
 }
 body {
+	overflow: hidden;
 	color: var(--color-foreground);
 	background: var(--color-background);
 	font-family: Arial, Helvetica, sans-serif;
 
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+img {
+	height: auto;
+	display: block;
+	max-width: 100%;
 }
 @media (prefers-color-scheme: dark) {
 	:root {
