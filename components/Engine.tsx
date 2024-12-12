@@ -5,9 +5,22 @@ import Matter from "matter-js";
 import styles from "./engine.module.css";
 import { useEffect, useRef } from "react";
 
+const links = [
+	{ label: "CV", href: "#" },
+	{ label: "Mail", href: "#" },
+	{ label: "GitHub", href: "#" },
+	{ label: "LinkedIn", href: "#" },
+];
+
+const apps = [
+	{ label: "Talea", href: "#" },
+	{ label: "Mintly", href: "#" },
+	{ label: "Flexikon", href: "#" },
+];
+
 export default function Engine() {
-	const apps = useRef<(HTMLAnchorElement | null)[]>([]);
-	const links = useRef<(HTMLAnchorElement | null)[]>([]);
+	const icons = useRef<(HTMLAnchorElement | null)[]>([]);
+	const pills = useRef<(HTMLAnchorElement | null)[]>([]);
 	const runner = useRef<Matter.Runner>(Matter.Runner.create());
 	const engine = useRef<Matter.Engine>(Matter.Engine.create());
 
@@ -17,34 +30,34 @@ export default function Engine() {
 		const windowWidth = window.innerWidth;
 		const windowHeight = window.innerHeight;
 
-		Matter.Composite.add(engine.current.world, [Matter.Bodies.rectangle(windowWidth / 2, windowHeight + 25, windowWidth, 50, { isStatic: true }), Matter.Bodies.rectangle(-25, windowHeight / 2, 50, windowHeight, { isStatic: true }), Matter.Bodies.rectangle(windowWidth + 25, windowHeight / 2, 50, windowHeight, { isStatic: true })]);
+		Matter.Composite.add(engine.current.world, [Matter.Bodies.rectangle(windowWidth / 2, windowHeight + 25, windowWidth, 50, { isStatic: true }), Matter.Bodies.rectangle(-25, windowHeight / 2, 50, windowHeight, { isStatic: true }), Matter.Bodies.rectangle(windowWidth + 25, windowHeight / 2, 50, windowHeight * 2, { isStatic: true })]);
 
-		links.current.forEach((link) => {
-			if (!link) return;
+		pills.current.forEach((pill) => {
+			if (!pill) return;
 
 			const x = windowWidth * 0.75 + Math.random() * windowWidth * 0.25;
 			const y = -240;
-			const width = link.offsetWidth;
-			const height = link.offsetHeight;
+			const width = pill.offsetWidth;
+			const height = pill.offsetHeight;
 			const angle = Math.random() * 2 * Math.PI;
 			const body = Matter.Bodies.rectangle(x, y, width, height, {
 				frictionAir: 0.03 * Math.random(),
 				friction: 0.5,
 				chamfer: { radius: 32 },
-				restitution: 0.3,
+				restitution: 0.5,
 				angle: angle,
 			});
 
 			Matter.Events.on(engine.current, "afterUpdate", () => {
-				link.style.left = `${body.position.x - width / 2}px`;
-				link.style.top = `${body.position.y - height / 2}px`;
-				link.style.transform = `rotate(${body.angle}rad)`;
+				pill.style.left = `${body.position.x - width / 2}px`;
+				pill.style.top = `${body.position.y - height / 2}px`;
+				pill.style.transform = `rotate(${body.angle}rad)`;
 			});
 			Matter.Composite.add(engine.current.world, body);
 		});
 
-		apps.current.forEach((app) => {
-			if (!app) return;
+		icons.current.forEach((icon) => {
+			if (!icon) return;
 
 			const x = windowWidth * 0.75 + Math.random() * windowWidth * 0.25;
 			const y = -240;
@@ -55,14 +68,14 @@ export default function Engine() {
 				frictionAir: 0.03 * Math.random(),
 				friction: 0.5,
 				chamfer: { radius: 16 },
-				restitution: 0.3,
+				restitution: 0.5,
 				angle: angle,
 			});
 
 			Matter.Events.on(engine.current, "afterUpdate", () => {
-				app.style.left = `${body.position.x - width / 2}px`;
-				app.style.top = `${body.position.y - height / 2}px`;
-				app.style.transform = `rotate(${body.angle}rad)`;
+				icon.style.left = `${body.position.x - width / 2}px`;
+				icon.style.top = `${body.position.y - height / 2}px`;
+				icon.style.transform = `rotate(${body.angle}rad)`;
 			});
 			Matter.Composite.add(engine.current.world, body);
 		});
@@ -105,62 +118,30 @@ export default function Engine() {
 
 	return (
 		<>
-			<a
-				className={styles.pill}
-				href="#"
-				ref={(element) => {
-					links.current[0] = element;
-				}}>
-				CV
-			</a>
-			<a
-				className={styles.pill}
-				href="#"
-				ref={(element) => {
-					links.current[1] = element;
-				}}>
-				Mail
-			</a>
-			<a
-				className={styles.pill}
-				href="#"
-				ref={(element) => {
-					links.current[2] = element;
-				}}>
-				GitHub
-			</a>
-			<a
-				className={styles.pill}
-				href="#"
-				ref={(element) => {
-					links.current[3] = element;
-				}}>
-				LinkedIn
-			</a>
-			<a
-				className={styles.app}
-				href="#"
-				ref={(element) => {
-					apps.current[0] = element;
-				}}>
-				<Image src="/images/mintly.svg" width={96} height={96} alt="Mintly" />
-			</a>
-			<a
-				className={styles.app}
-				href="#"
-				ref={(element) => {
-					apps.current[1] = element;
-				}}>
-				<Image src="/images/flexikon.svg" width={96} height={96} alt="Flexikon" />
-			</a>
-			<a
-				className={styles.app}
-				href="#"
-				ref={(element) => {
-					apps.current[2] = element;
-				}}>
-				<Image src="/images/talea.svg" width={96} height={96} alt="Talea" />
-			</a>
+			{links.map((link, index) => (
+				<a
+					key={link.label}
+					className={styles.link}
+					href={link.href}
+					title={link.label}
+					ref={(element) => {
+						pills.current[index] = element;
+					}}>
+					{link.label}
+				</a>
+			))}
+			{apps.map((app, index) => (
+				<a
+					key={app.label}
+					className={styles.app}
+					href={app.href}
+					title={app.label}
+					ref={(element) => {
+						icons.current[index] = element;
+					}}>
+					<Image src={`/images/${app.label.toLowerCase()}.svg`} width={96} height={96} alt={app.label} />
+				</a>
+			))}
 		</>
 	);
 }
