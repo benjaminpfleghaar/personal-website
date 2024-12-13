@@ -1,9 +1,9 @@
 .main {
 	display: flex;
-	max-width: 900px;
+	max-width: 768px;
 	flex-direction: column;
-	gap: var(--spacing-24);
-	padding: var(--spacing-24);
+	gap: var(--spacing-12);
+	padding: var(--spacing-48);
 	justify-content: flex-start;
 }
 @media (min-width: 768px) {
@@ -12,6 +12,4 @@
 		padding: var(--spacing-48);
 		justify-content: space-between;
 	}
-}
-@media (min-width: 1280px) {
 }

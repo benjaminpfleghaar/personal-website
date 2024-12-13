@@ -39,7 +39,7 @@ export default function Engine() {
 		pills.current.forEach((pill) => {
 			if (!pill) return;
 
-			const x = windowWidth * 0.75 + Math.random() * windowWidth * 0.25;
+			const x = windowWidth <= 768 ? Math.random() * windowWidth : windowWidth * 0.75 + Math.random() * windowWidth * 0.25;
 			const y = -240;
 			const width = pill.offsetWidth;
 			const height = pill.offsetHeight;
@@ -63,7 +63,7 @@ export default function Engine() {
 		icons.current.forEach((icon) => {
 			if (!icon) return;
 
-			const x = windowWidth * 0.75 + Math.random() * windowWidth * 0.25;
+			const x = windowWidth <= 768 ? Math.random() * windowWidth : windowWidth * 0.75 + Math.random() * windowWidth * 0.25;
 			const y = -240;
 			const width = 96;
 			const height = 96;
