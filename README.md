@@ -16,6 +16,7 @@ This project is my personal website built to showcase who I am and what I do. It
 ## Backlog
 
 -   Make elements draggable
+-   Provide light/dark mode toggle
 
 ## Dependencies
 
