@@ -5,12 +5,10 @@ import Engine from "@/components/Engine";
 
 export default function Home() {
 	return (
-		<>
-			<main className={styles.main}>
-				<Header />
-				<Engine />
-				<Footer />
-			</main>
-		</>
+		<main className={styles.main}>
+			<Header />
+			<Engine />
+			<Footer />
+		</main>
 	);
 }

@@ -7,12 +7,12 @@ export default function Footer() {
 			<nav aria-label="Legal Links">
 				<ul className={styles.list}>
 					<li>
-						<Link href="/" className={styles.link}>
+						<Link href="/privacy-policy" className={styles.link}>
 							Privacy Policy
 						</Link>
 					</li>
 					<li>
-						<Link href="/" className={styles.link}>
+						<Link href="/legal-notice" className={styles.link}>
 							Legal Notice
 						</Link>
 					</li>
