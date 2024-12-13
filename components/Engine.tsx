@@ -121,33 +121,36 @@ export default function Engine() {
 	}, []);
 
 	return (
-		<>
-			{links.map((link, index) => (
-				<a
-					key={link.label}
-					className={styles.link}
-					href={link.href}
-					title={`Go to ${link.label}`}
-					target="_blank"
-					ref={(element) => {
-						pills.current[index] = element;
-					}}>
-					{link.label}
-				</a>
-			))}
-			{apps.map((app, index) => (
-				<a
-					key={app.label}
-					className={styles.app}
-					href={app.href}
-					title={`Open ${app.label} app`}
-					target="_blank"
-					ref={(element) => {
-						icons.current[index] = element;
-					}}>
-					<Image src={`/images/${app.label.toLowerCase()}.svg`} width={96} height={96} alt={`App icon of ${app.label}`} />
-				</a>
-			))}
-		</>
+		<section>
+			<nav aria-label="Social Links">
+				{links.map((link, index) => (
+					<a
+						key={link.label}
+						className={styles.link}
+						href={link.href}
+						target="_blank"
+						ref={(element) => {
+							pills.current[index] = element;
+						}}>
+						{link.label}
+					</a>
+				))}
+			</nav>
+			<nav aria-label="Featured Apps">
+				{apps.map((app, index) => (
+					<a
+						key={app.label}
+						className={styles.app}
+						href={app.href}
+						target="_blank"
+						ref={(element) => {
+							icons.current[index] = element;
+						}}>
+						<Image src={`/images/${app.label.toLowerCase()}.svg`} width={96} height={96} alt="" />
+						<span className={styles.label}>{`Open ${app.label} on GitHub`}</span>
+					</a>
+				))}
+			</nav>
+		</section>
 	);
 }

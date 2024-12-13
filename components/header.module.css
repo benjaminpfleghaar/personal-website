@@ -4,7 +4,7 @@
 	font-size: var(--spacing-24);
 	line-height: var(--spacing-32);
 }
-.subline {
+.paragraph {
 	font-weight: 500;
 	font-size: var(--spacing-24);
 	color: var(--color-foreground);
