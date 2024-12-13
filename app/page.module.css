@@ -1,9 +1,9 @@
 .main {
 	display: flex;
 	max-width: 768px;
-	flex-direction: column;
 	gap: var(--spacing-12);
-	padding: var(--spacing-48);
+	flex-direction: column;
+	padding: var(--spacing-32);
 }
 @media (min-width: 768px) {
 	.main {
