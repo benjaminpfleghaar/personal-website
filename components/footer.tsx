@@ -1,11 +1,10 @@
 import Link from "next/link";
-import styles from "@/styles/footer.module.css";
 
 export default function Footer() {
 	return (
 		<footer>
 			<nav aria-label="Legal Links">
-				<ul className={styles.list}>
+				<ul className="flex flex-col md:flex-row md:gap-6">
 					<li>
 						<Link href="/privacy-policy">Privacy Policy</Link>
 					</li>

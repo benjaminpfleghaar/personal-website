@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Metadata } from "next";
-import styles from "@/styles/legal.module.css";
 
 export const metadata: Metadata = {
 	title: "Legal Notice - Benjamin Pfleghaar",
@@ -8,12 +7,12 @@ export const metadata: Metadata = {
 
 export default function LegalNotice() {
 	return (
-		<main className={styles.main}>
+		<main className="flex flex-col gap-4 max-w-screen-sm p-8 md:p-12">
 			<header>
 				<Link href="/">Home</Link>
 				<h1>Legal Notice</h1>
 			</header>
-			<section className={styles.section}>
+			<section className="flex flex-col gap-4">
 				<p>
 					Benjamin Pfleghaar
 					<br />
