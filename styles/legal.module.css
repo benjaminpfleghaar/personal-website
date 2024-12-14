@@ -1,0 +1,17 @@
+.main {
+	display: flex;
+	max-width: 768px;
+	gap: var(--spacing-16);
+	flex-direction: column;
+	padding: var(--spacing-32);
+}
+.section {
+	display: flex;
+	gap: var(--spacing-16);
+	flex-direction: column;
+}
+@media (min-width: 768px) {
+	.main {
+		padding: var(--spacing-48);
+	}
+}

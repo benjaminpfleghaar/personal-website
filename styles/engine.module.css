@@ -17,6 +17,7 @@
 	left: 0;
 	top: -96px;
 	position: absolute;
+	border-radius: 16px;
 }
 .label {
 	width: 1px;

@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import Matter from "matter-js";
-import styles from "./engine.module.css";
 import { useEffect, useRef } from "react";
 import { useLockBodyScroll } from "react-use";
+import styles from "@/styles/engine.module.css";
 
 const links = [
 	{ label: "CV", href: "#" },

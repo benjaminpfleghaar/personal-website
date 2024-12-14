@@ -1,0 +1,84 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--font-family: "Geist";
+	--font-geist-16: 500 1rem/1.5rem var(--font-family);
+	--font-geist-24: 500 1.5rem/2rem var(--font-family);
+	--font-geist-40: 500 2.5rem/2.5rem var(--font-family);
+
+	--color-gray: #6f6f6f;
+	--color-foreground: #161616;
+	--color-background: #ffffff;
+
+	--spacing-8: 0.5rem;
+	--spacing-12: 0.75rem;
+	--spacing-16: 1rem;
+	--spacing-24: 1.5rem;
+	--spacing-32: 2rem;
+	--spacing-40: 2.5rem;
+	--spacing-48: 3rem;
+}
+html {
+	font-size: 100%;
+}
+body {
+	color: var(--color-foreground);
+	background: var(--color-background);
+	font-family: Arial, Helvetica, sans-serif;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+h1,
+h2,
+h3,
+h4 {
+	font: var(--font-geist-16);
+}
+p {
+	font: var(--font-geist-16);
+	color: var(--color-foreground);
+}
+a {
+	border-radius: 2px;
+	text-decoration: none;
+	color: var(--color-gray);
+	font: var(--font-geist-16);
+	transition: color 0.2s ease;
+
+	&:focus-visible {
+		outline-offset: 2px;
+		outline: 2px solid var(--color-foreground);
+	}
+}
+ul {
+	display: flex;
+	list-style: none;
+	gap: var(--spacing-8);
+	flex-direction: column;
+	font: var(--font-geist-16);
+	color: var(--color-foreground);
+}
+img {
+	height: auto;
+	display: block;
+	max-width: 100%;
+}
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+	a:hover {
+		color: var(--color-foreground);
+	}
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray: #8d8d8d;
+		--color-foreground: #ffffff;
+		--color-background: #161616;
+	}
+}
