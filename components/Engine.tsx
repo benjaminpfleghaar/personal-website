@@ -123,34 +123,40 @@ export default function Engine() {
 	}, []);
 
 	return (
-		<section>
+		<>
 			<nav aria-label="Social Links">
-				{links.map((link, index) => (
-					<a
-						key={link.label}
-						href={link.href}
-						target="_blank"
-						ref={(element) => {
-							pills.current[index] = element;
-						}}>
-						{link.label}
-					</a>
-				))}
+				<ul>
+					{links.map((link, index) => (
+						<li key={link.label}>
+							<a
+								href={link.href}
+								target="_blank"
+								ref={(element) => {
+									pills.current[index] = element;
+								}}>
+								{link.label}
+							</a>
+						</li>
+					))}
+				</ul>
 			</nav>
 			<nav aria-label="Featured Apps">
-				{apps.map((app, index) => (
-					<a
-						key={app.label}
-						href={app.href}
-						target="_blank"
-						ref={(element) => {
-							icons.current[index] = element;
-						}}>
-						<Image src={`/images/${app.label.toLowerCase()}.svg`} width={96} height={96} alt="" />
-						<span>{`Open ${app.label} on GitHub`}</span>
-					</a>
-				))}
+				<ul>
+					{apps.map((app, index) => (
+						<li key={app.label}>
+							<a
+								href={app.href}
+								target="_blank"
+								ref={(element) => {
+									icons.current[index] = element;
+								}}>
+								<Image src={`/images/${app.label.toLowerCase()}.svg`} width={96} height={96} alt="" />
+								<span>{`Open ${app.label} on GitHub`}</span>
+							</a>
+						</li>
+					))}
+				</ul>
 			</nav>
-		</section>
+		</>
 	);
 }

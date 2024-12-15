@@ -4,7 +4,7 @@
 
 @layer base {
 	body {
-		@apply bg-background font-medium text-foreground antialiased dark:bg-foreground dark:text-background;
+		@apply max-w-screen-sm bg-background font-medium text-foreground antialiased dark:bg-foreground dark:text-background;
 	}
 }
 

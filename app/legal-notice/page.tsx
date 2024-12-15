@@ -7,14 +7,14 @@ export const metadata: Metadata = {
 
 export default function LegalNotice() {
 	return (
-		<main className="flex max-w-screen-sm flex-col gap-4 p-8 md:p-12">
+		<div className="flex flex-col gap-4 p-8 md:p-12">
 			<header>
 				<Link href="/" className="text-darkgray hover:text-foreground dark:text-lightgray dark:hover:text-background">
 					Home
 				</Link>
 				<h1>Legal Notice</h1>
 			</header>
-			<section className="flex flex-col gap-4">
+			<main className="flex flex-col gap-4">
 				<p>
 					Benjamin Pfleghaar
 					<br />
@@ -51,7 +51,7 @@ export default function LegalNotice() {
 				<h2>Verbraucher&shy;streit&shy;beilegung/Universal&shy;schlichtungs&shy;stelle</h2>
 				<p>Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
 				<p>Quelle: https://www.e-recht24.de</p>
-			</section>
-		</main>
+			</main>
+		</div>
 	);
 }
