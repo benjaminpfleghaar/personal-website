@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Matter from "matter-js";
 import { useEffect, useRef } from "react";
-import { useLockBodyScroll } from "react-use";
 
 const links = [
 	{ label: "CV", href: "#" },
@@ -19,8 +18,6 @@ const apps = [
 ];
 
 export default function Engine() {
-	// useLockBodyScroll(true);
-
 	const icons = useRef<(HTMLAnchorElement | null)[]>([]);
 	const pills = useRef<(HTMLAnchorElement | null)[]>([]);
 	const runner = useRef<Matter.Runner>(Matter.Runner.create());
@@ -129,6 +126,7 @@ export default function Engine() {
 					{links.map((link, index) => (
 						<li key={link.label}>
 							<a
+								className="rounded-4xl absolute -top-16 left-0 flex h-16 select-none items-center bg-foreground px-6 text-4xl text-background dark:bg-background dark:text-foreground"
 								href={link.href}
 								target="_blank"
 								ref={(element) => {
@@ -145,13 +143,14 @@ export default function Engine() {
 					{apps.map((app, index) => (
 						<li key={app.label}>
 							<a
+								className="absolute -top-24 left-0 rounded-2xl"
 								href={app.href}
 								target="_blank"
 								ref={(element) => {
 									icons.current[index] = element;
 								}}>
 								<Image src={`/images/${app.label.toLowerCase()}.svg`} width={96} height={96} alt="" />
-								<span>{`Open ${app.label} on GitHub`}</span>
+								<span className="sr-only">{`Open ${app.label} on GitHub`}</span>
 							</a>
 						</li>
 					))}

@@ -15,23 +15,22 @@ This project is my personal website built to showcase who I am and what I do. It
 
 ## Backlog
 
--   Make elements draggable
--   Provide light/dark mode toggle
+- Make elements draggable
+- Provide light/dark mode toggle
 
 ## Dependencies
 
--   next
--   react-use
--   react-dom
--   matter-js
--   react
+- next
+- react
+- react-dom
+- matter-js
 
 ## Tech Stack
 
--   VSC
--   GitHub
--   Next.js
--   TypeScript
--   React
--   HTML
--   CSS
+- VSC
+- GitHub
+- Next.js
+- TypeScript
+- Tailwind
+- React
+- HTML
