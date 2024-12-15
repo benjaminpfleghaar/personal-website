@@ -7,9 +7,11 @@ export const metadata: Metadata = {
 
 export default function LegalNotice() {
 	return (
-		<main className="flex flex-col gap-4 max-w-screen-sm p-8 md:p-12">
+		<main className="flex max-w-screen-sm flex-col gap-4 p-8 md:p-12">
 			<header>
-				<Link href="/">Home</Link>
+				<Link href="/" className="text-darkgray hover:text-foreground dark:text-lightgray dark:hover:text-background">
+					Home
+				</Link>
 				<h1>Legal Notice</h1>
 			</header>
 			<section className="flex flex-col gap-4">

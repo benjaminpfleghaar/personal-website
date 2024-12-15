@@ -1,17 +1,11 @@
 @tailwind base;
-@tailwind components; /* necessary? */
+@tailwind components;
 @tailwind utilities;
 
 @layer base {
 	body {
-		@apply text-foreground dark:text-background font-medium antialiased bg-background dark:bg-foreground;
+		@apply bg-background font-medium text-foreground antialiased dark:bg-foreground dark:text-background;
 	}
-	a {
-		@apply text-darkgray dark:text-lightgray hover:text-foreground dark:hover:text-background;
-	}
-	/* ul {
-		@apply flex flex-col gap-2;
-	} */
 }
 
 /* span screen reader only class

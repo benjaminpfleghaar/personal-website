@@ -7,9 +7,11 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicy() {
 	return (
-		<main className="flex flex-col gap-4 max-w-screen-sm p-8 md:p-12">
+		<main className="flex max-w-screen-sm flex-col gap-4 p-8 md:p-12">
 			<header>
-				<Link href="/">Home</Link>
+				<Link href="/" className="text-darkgray hover:text-foreground dark:text-lightgray dark:hover:text-background">
+					Home
+				</Link>
 				<h1>Privacy Policy</h1>
 			</header>
 			<section className="flex flex-col gap-4">
@@ -122,7 +124,7 @@ export default function PrivacyPolicy() {
 					Sie sich jederzeit an uns wenden.
 				</p>
 				<h3>Recht auf Einschr&auml;nkung der Verarbeitung</h3> <p>Sie haben das Recht, die Einschr&auml;nkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Hierzu k&ouml;nnen Sie sich jederzeit an uns wenden. Das Recht auf Einschr&auml;nkung der Verarbeitung besteht in folgenden F&auml;llen:</p>
-				<ul>
+				<ul className="flex flex-col gap-2">
 					<li>Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten personenbezogenen Daten bestreiten, ben&ouml;tigen wir in der Regel Zeit, um dies zu &uuml;berpr&uuml;fen. F&uuml;r die Dauer der Pr&uuml;fung haben Sie das Recht, die Einschr&auml;nkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
 					<li>Wenn die Verarbeitung Ihrer personenbezogenen Daten unrechtm&auml;&szlig;ig geschah/geschieht, k&ouml;nnen Sie statt der L&ouml;schung die Einschr&auml;nkung der Datenverarbeitung verlangen.</li>
 					<li>Wenn wir Ihre personenbezogenen Daten nicht mehr ben&ouml;tigen, Sie sie jedoch zur Aus&uuml;bung, Verteidigung oder Geltendmachung von Rechtsanspr&uuml;chen ben&ouml;tigen, haben Sie das Recht, statt der L&ouml;schung die Einschr&auml;nkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
@@ -141,7 +143,7 @@ export default function PrivacyPolicy() {
 				<h2>4. Datenerfassung auf dieser Website</h2>
 				<h3>Server-Log-Dateien</h3>
 				<p>Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns &uuml;bermittelt. Dies sind:</p>
-				<ul>
+				<ul className="flex flex-col gap-2">
 					<li>Browsertyp und Browserversion</li>
 					<li>verwendetes Betriebssystem</li>
 					<li>Referrer URL</li>
