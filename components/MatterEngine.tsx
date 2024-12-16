@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Matter from "matter-js";
+import Icon from "@/components/Icon";
+import Pill from "@/components/Pill";
 import { useEffect, useRef } from "react";
 import { useLockBodyScroll } from "react-use";
 
@@ -12,13 +14,13 @@ const links = [
 	{ label: "LinkedIn", href: "#" },
 ];
 
-const apps = [
+const projects = [
 	{ label: "Talea", href: "https://github.com/benjaminpfleghaar/talea" },
 	{ label: "Mintly", href: "https://github.com/benjaminpfleghaar/mintly" },
 	{ label: "Flexikon", href: "https://github.com/benjaminpfleghaar/flexikon" },
 ];
 
-export default function Engine() {
+export default function MatterEngine() {
 	useLockBodyScroll(true);
 
 	const icons = useRef<(HTMLAnchorElement | null)[]>([]);
@@ -128,33 +130,29 @@ export default function Engine() {
 				<ul>
 					{links.map((link, index) => (
 						<li key={link.label}>
-							<a
-								className="absolute -top-16 left-0 flex h-16 select-none items-center rounded-4xl bg-foreground px-6 text-4xl text-background dark:bg-background dark:text-foreground"
+							<Pill
 								href={link.href}
-								target="_blank"
 								ref={(element) => {
 									pills.current[index] = element;
 								}}>
 								{link.label}
-							</a>
+							</Pill>
 						</li>
 					))}
 				</ul>
 			</nav>
-			<nav aria-label="Featured Apps">
+			<nav aria-label="Featured Projects">
 				<ul>
-					{apps.map((app, index) => (
+					{projects.map((app, index) => (
 						<li key={app.label}>
-							<a
-								className="absolute -top-24 left-0 rounded-2xl"
+							<Icon
 								href={app.href}
-								target="_blank"
 								ref={(element) => {
 									icons.current[index] = element;
 								}}>
 								<Image src={`/images/${app.label.toLowerCase()}.svg`} width={96} height={96} alt="" />
 								<span className="sr-only">{`Open ${app.label} on GitHub`}</span>
-							</a>
+							</Icon>
 						</li>
 					))}
 				</ul>
