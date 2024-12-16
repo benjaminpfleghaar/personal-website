@@ -4,6 +4,6 @@
 
 @layer base {
 	body {
-		@apply max-w-screen-md bg-background p-8 font-medium text-foreground antialiased md:p-12 dark:bg-foreground dark:text-background;
+		@apply max-w-screen-md bg-background p-8 font-medium text-foreground antialiased sm:p-12 dark:bg-foreground dark:text-background;
 	}
 }
