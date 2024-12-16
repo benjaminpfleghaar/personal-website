@@ -7,8 +7,8 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicy() {
 	return (
-		<div className="flex flex-col gap-4 p-8 md:p-12">
-			<header>
+		<>
+			<header className="mb-4">
 				<Link href="/" className="text-darkgray hover:text-foreground dark:text-lightgray dark:hover:text-background">
 					Home
 				</Link>
@@ -164,6 +164,6 @@ export default function PrivacyPolicy() {
 				</p>
 				<p>Quelle: https://www.e-recht24.de</p>
 			</main>
-		</div>
+		</>
 	);
 }

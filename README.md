@@ -21,9 +21,10 @@ This project is my personal website built to showcase who I am and what I do. It
 ## Dependencies
 
 - next
-- react
+- react-use
 - react-dom
 - matter-js
+- react
 
 ## Tech Stack
 

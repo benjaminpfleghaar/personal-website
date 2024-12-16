@@ -7,8 +7,8 @@ export const metadata: Metadata = {
 
 export default function LegalNotice() {
 	return (
-		<div className="flex flex-col gap-4 p-8 md:p-12">
-			<header>
+		<>
+			<header className="mb-4">
 				<Link href="/" className="text-darkgray hover:text-foreground dark:text-lightgray dark:hover:text-background">
 					Home
 				</Link>
@@ -52,6 +52,6 @@ export default function LegalNotice() {
 				<p>Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
 				<p>Quelle: https://www.e-recht24.de</p>
 			</main>
-		</div>
+		</>
 	);
 }

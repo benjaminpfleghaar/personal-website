@@ -4,11 +4,9 @@
 
 @layer base {
 	body {
-		@apply max-w-screen-sm bg-background font-medium text-foreground antialiased dark:bg-foreground dark:text-background;
+		@apply max-w-screen-sm bg-background p-8 font-medium text-foreground antialiased md:p-12 dark:bg-foreground dark:text-background;
 	}
 }
-
-/* span screen reader only class
 
 /* &:focus-visible {
 	outline-offset: 2px;
