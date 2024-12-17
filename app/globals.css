@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply max-w-screen-md bg-background p-8 font-medium text-foreground antialiased sm:p-12 dark:bg-foreground dark:text-background;
+	}
+}
+.link {
+	@apply rounded-sm text-darkgray outline-offset-2 hover:text-foreground focus:outline-none focus-visible:outline-2 focus-visible:outline-foreground dark:text-lightgray dark:hover:text-background dark:focus-visible:outline-background;
+}
+.pill {
+	@apply absolute -top-16 left-0 flex h-16 select-none items-center rounded-4xl bg-foreground px-6 text-4xl text-background outline-offset-2 focus:outline-none focus-visible:outline-2 focus-visible:outline-foreground dark:bg-background dark:text-foreground dark:focus-visible:outline-background;
+}
+.icon {
+	@apply absolute -top-24 left-0 rounded-2xl outline-offset-2 focus:outline-none focus-visible:outline-2 focus-visible:outline-foreground dark:focus-visible:outline-background;
+}

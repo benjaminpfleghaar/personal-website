@@ -4,22 +4,21 @@ import Image from "next/image";
 import Matter from "matter-js";
 import { useEffect, useRef } from "react";
 import { useLockBodyScroll } from "react-use";
-import styles from "@/styles/engine.module.css";
 
 const links = [
-	{ label: "CV", href: "#" },
-	{ label: "Mail", href: "#" },
-	{ label: "GitHub", href: "#" },
-	{ label: "LinkedIn", href: "#" },
+	{ label: "CV", href: "Benjamin-Pfleghaar_CV.pdf", target: "_blank" },
+	{ label: "Mail", href: "mailto:info@benjaminpfleghaar.com", target: "_self" },
+	{ label: "GitHub", href: "https://github.com/benjaminpfleghaar", target: "_blank" },
+	{ label: "LinkedIn", href: "https://www.linkedin.com/in/benjaminpfleghaar", target: "_blank" },
 ];
 
-const apps = [
+const projects = [
 	{ label: "Talea", href: "https://github.com/benjaminpfleghaar/talea" },
 	{ label: "Mintly", href: "https://github.com/benjaminpfleghaar/mintly" },
 	{ label: "Flexikon", href: "https://github.com/benjaminpfleghaar/flexikon" },
 ];
 
-export default function Engine() {
+export default function MatterEngine() {
 	useLockBodyScroll(true);
 
 	const icons = useRef<(HTMLAnchorElement | null)[]>([]);
@@ -124,36 +123,42 @@ export default function Engine() {
 	}, []);
 
 	return (
-		<section>
+		<>
 			<nav aria-label="Social Links">
-				{links.map((link, index) => (
-					<a
-						key={link.label}
-						className={styles.link}
-						href={link.href}
-						target="_blank"
-						ref={(element) => {
-							pills.current[index] = element;
-						}}>
-						{link.label}
-					</a>
-				))}
+				<ul>
+					{links.map((link, index) => (
+						<li key={link.label}>
+							<a
+								className="pill"
+								href={link.href}
+								target={link.target}
+								ref={(element) => {
+									pills.current[index] = element;
+								}}>
+								{link.label}
+							</a>
+						</li>
+					))}
+				</ul>
 			</nav>
-			<nav aria-label="Featured Apps">
-				{apps.map((app, index) => (
-					<a
-						key={app.label}
-						className={styles.app}
-						href={app.href}
-						target="_blank"
-						ref={(element) => {
-							icons.current[index] = element;
-						}}>
-						<Image src={`/images/${app.label.toLowerCase()}.svg`} width={96} height={96} alt="" />
-						<span className={styles.label}>{`Open ${app.label} on GitHub`}</span>
-					</a>
-				))}
+			<nav aria-label="Featured Projects">
+				<ul>
+					{projects.map((app, index) => (
+						<li key={app.label}>
+							<a
+								className="icon"
+								href={app.href}
+								target="_blank"
+								ref={(element) => {
+									icons.current[index] = element;
+								}}>
+								<Image src={`/${app.label.toLowerCase()}.svg`} width={96} height={96} alt="" />
+								<span className="sr-only">{`Open ${app.label} on GitHub`}</span>
+							</a>
+						</li>
+					))}
+				</ul>
 			</nav>
-		</section>
+		</>
 	);
 }

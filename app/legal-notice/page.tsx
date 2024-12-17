@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Metadata } from "next";
-import styles from "@/styles/legal.module.css";
 
 export const metadata: Metadata = {
 	title: "Legal Notice - Benjamin Pfleghaar",
@@ -8,12 +7,14 @@ export const metadata: Metadata = {
 
 export default function LegalNotice() {
 	return (
-		<main className={styles.main}>
-			<header>
-				<Link href="/">Home</Link>
+		<>
+			<header className="mb-4">
+				<Link href="/" className="link">
+					Home
+				</Link>
 				<h1>Legal Notice</h1>
 			</header>
-			<section className={styles.section}>
+			<main className="flex flex-col gap-4">
 				<p>
 					Benjamin Pfleghaar
 					<br />
@@ -50,7 +51,7 @@ export default function LegalNotice() {
 				<h2>Verbraucher&shy;streit&shy;beilegung/Universal&shy;schlichtungs&shy;stelle</h2>
 				<p>Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
 				<p>Quelle: https://www.e-recht24.de</p>
-			</section>
-		</main>
+			</main>
+		</>
 	);
 }
