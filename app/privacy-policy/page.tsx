@@ -1,5 +1,5 @@
+import Link from "next/link";
 import { Metadata } from "next";
-import TextLink from "@/components/TextLink";
 
 export const metadata: Metadata = {
 	title: "Privacy Policy - Benjamin Pfleghaar",
@@ -9,7 +9,9 @@ export default function PrivacyPolicy() {
 	return (
 		<>
 			<header className="mb-4">
-				<TextLink href="/">Home</TextLink>
+				<Link href="/" className="link">
+					Home
+				</Link>
 				<h1>Privacy Policy</h1>
 			</header>
 			<main className="flex flex-col gap-4">

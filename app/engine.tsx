@@ -2,16 +2,14 @@
 
 import Image from "next/image";
 import Matter from "matter-js";
-import Icon from "@/components/Icon";
-import Pill from "@/components/Pill";
 import { useEffect, useRef } from "react";
 import { useLockBodyScroll } from "react-use";
 
 const links = [
-	{ label: "CV", href: "#" },
-	{ label: "Mail", href: "#" },
-	{ label: "GitHub", href: "#" },
-	{ label: "LinkedIn", href: "#" },
+	{ label: "CV", href: "Benjamin-Pfleghaar_CV.pdf", target: "_blank" },
+	{ label: "Mail", href: "mailto:info@benjaminpfleghaar.com", target: "_self" },
+	{ label: "GitHub", href: "https://github.com/benjaminpfleghaar", target: "_blank" },
+	{ label: "LinkedIn", href: "https://www.linkedin.com/in/benjaminpfleghaar", target: "_blank" },
 ];
 
 const projects = [
@@ -130,13 +128,15 @@ export default function MatterEngine() {
 				<ul>
 					{links.map((link, index) => (
 						<li key={link.label}>
-							<Pill
+							<a
+								className="pill"
 								href={link.href}
+								target={link.target}
 								ref={(element) => {
 									pills.current[index] = element;
 								}}>
 								{link.label}
-							</Pill>
+							</a>
 						</li>
 					))}
 				</ul>
@@ -145,14 +145,16 @@ export default function MatterEngine() {
 				<ul>
 					{projects.map((app, index) => (
 						<li key={app.label}>
-							<Icon
+							<a
+								className="icon"
 								href={app.href}
+								target="_blank"
 								ref={(element) => {
 									icons.current[index] = element;
 								}}>
-								<Image src={`/images/${app.label.toLowerCase()}.svg`} width={96} height={96} alt="" />
+								<Image src={`/${app.label.toLowerCase()}.svg`} width={96} height={96} alt="" />
 								<span className="sr-only">{`Open ${app.label} on GitHub`}</span>
-							</Icon>
+							</a>
 						</li>
 					))}
 				</ul>

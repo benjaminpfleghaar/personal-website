@@ -1,5 +1,5 @@
-import TextLink from "@/components/TextLink";
-import MatterEngine from "@/components/MatterEngine";
+import Link from "next/link";
+import MatterEngine from "./engine";
 
 export default function Home() {
 	return (
@@ -15,10 +15,14 @@ export default function Home() {
 				<nav aria-label="Legal Links">
 					<ul className="flex flex-col sm:flex-row sm:gap-6">
 						<li>
-							<TextLink href="/privacy-policy">Privacy Policy</TextLink>
+							<Link href="/privacy-policy" className="link">
+								Privacy Policy
+							</Link>
 						</li>
 						<li>
-							<TextLink href="/legal-notice">Legal Notice</TextLink>
+							<Link href="/legal-notice" className="link">
+								Legal Notice
+							</Link>
 						</li>
 					</ul>
 				</nav>

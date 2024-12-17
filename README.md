@@ -17,6 +17,7 @@ This project is my personal website built to showcase who I am and what I do. It
 
 - Make elements draggable
 - Provide light/dark mode toggle
+- Add not-found.js page
 
 ## Dependencies
 
