@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react";
 import { useLockBodyScroll } from "react-use";
 
 const links = [
-	{ label: "CV", href: "Benjamin-Pfleghaar_CV.pdf", target: "_blank" },
+	{ label: "CV", href: "/Benjamin-Pfleghaar_CV.pdf", target: "_blank" },
 	{ label: "Mail", href: "mailto:info@benjaminpfleghaar.com", target: "_self" },
 	{ label: "GitHub", href: "https://github.com/benjaminpfleghaar", target: "_blank" },
 	{ label: "LinkedIn", href: "https://www.linkedin.com/in/benjaminpfleghaar", target: "_blank" },
