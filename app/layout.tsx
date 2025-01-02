@@ -7,7 +7,10 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-	title: "Benjamin Pfleghaar",
+	title: {
+		template: "%s - Benjamin Pfleghaar",
+		default: "Benjamin Pfleghaar",
+	},
 	description: "Web Developer with a strong background in UX Design",
 };
 

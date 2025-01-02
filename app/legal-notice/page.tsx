@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Legal Notice - Benjamin Pfleghaar",
+	title: "Legal Notice",
 };
 
 export default function LegalNotice() {

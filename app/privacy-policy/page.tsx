@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Privacy Policy - Benjamin Pfleghaar",
+	title: "Privacy Policy",
 };
 
 export default function PrivacyPolicy() {
