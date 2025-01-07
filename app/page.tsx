@@ -1,12 +1,19 @@
 import Link from "next/link";
 import MatterEngine from "./engine";
 
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
 export default function Home() {
+	const getCurrentMonthAndYear = () => {
+		const date = new Date();
+		return `${months[(date.getMonth() + 1) % 12]} ${date.getFullYear()}`;
+	};
+
 	return (
 		<div className="flex flex-col gap-4 sm:min-h-[calc(100dvh-6rem)] sm:justify-between">
 			<header>
 				<h1 className="text-2xl text-darkgray dark:text-lightgray">Benjamin Pfleghaar.</h1>
-				<p className="text-2xl">Web Developer with a strong back&shy;ground in UX Design. Open to new pro&shy;jects starting January 2025.</p>
+				<p className="text-2xl">Web Developer with a strong back&shy;ground in UX Design. Open to new pro&shy;jects starting {getCurrentMonthAndYear()}.</p>
 			</header>
 			<main>
 				<MatterEngine />
