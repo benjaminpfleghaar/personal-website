@@ -15,9 +15,9 @@ This project is my personal website built to showcase who I am and what I do. It
 
 ## Backlog
 
-- Make elements draggable
+- ~~Add not-found.js page~~
 - Provide light/dark mode toggle
-- Add not-found.js page
+- Make elements draggable
 
 ## Dependencies
 
