@@ -1,12 +1,12 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-darkgray: #6f6f6f;
-  --color-lightgray: #8d8d8d;
-  --color-foreground: #161616;
-  --color-background: #ffffff;
+    --color-darkgray: #6f6f6f;
+    --color-lightgray: #8d8d8d;
+    --color-foreground: #161616;
+    --color-background: #ffffff;
 
-  --radius-4xl: 2rem;
+    --radius-4xl: 2rem;
 }
 
 /*
@@ -18,26 +18,27 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+
+    body {
+        @apply max-w-(--breakpoint-md) bg-background p-8 font-medium text-foreground sm:p-12 dark:bg-foreground dark:text-background;
+    }
 }
 
-@layer base {
-	body {
-		@apply max-w-(--breakpoint-md) bg-background p-8 font-medium text-foreground sm:p-12 dark:bg-foreground dark:text-background;
-	}
-}
 .link {
-	@apply rounded-xs text-darkgray outline-offset-2 hover:text-foreground focus:outline-hidden focus-visible:outline-2 focus-visible:outline-foreground dark:text-lightgray dark:hover:text-background dark:focus-visible:outline-background;
+    @apply rounded-xs text-darkgray outline-offset-2 hover:text-foreground focus:outline-hidden focus-visible:outline-2 focus-visible:outline-foreground dark:text-lightgray dark:hover:text-background dark:focus-visible:outline-background;
 }
+
 .pill {
-	@apply absolute -top-16 left-0 flex h-16 select-none items-center rounded-4xl bg-foreground px-6 text-4xl text-background outline-offset-2 focus:outline-hidden focus-visible:outline-2 focus-visible:outline-foreground dark:bg-background dark:text-foreground dark:focus-visible:outline-background;
+    @apply absolute -top-16 left-0 flex h-16 select-none items-center rounded-4xl bg-foreground px-6 text-4xl text-background outline-offset-2 focus:outline-hidden focus-visible:outline-2 focus-visible:outline-foreground dark:bg-background dark:text-foreground dark:focus-visible:outline-background;
 }
+
 .icon {
-	@apply absolute -top-24 left-0 rounded-2xl outline-offset-2 focus:outline-hidden focus-visible:outline-2 focus-visible:outline-foreground dark:focus-visible:outline-background;
+    @apply absolute -top-24 left-0 rounded-2xl outline-offset-2 focus:outline-hidden focus-visible:outline-2 focus-visible:outline-foreground dark:focus-visible:outline-background;
 }
