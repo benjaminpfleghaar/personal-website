@@ -1,6 +1,7 @@
 # Personal Website
 
-This project is my personal website built to showcase who I am and what I do. It’s designed to present my projects and share my social links. The layout includes a playful twist with interactive elements for users to play around.
+This project is my personal website built to showcase who I am and what I do. It’s designed to present my projects and
+share my social links. The layout includes a playful twist with interactive elements for users to play around.
 
 ## Table of Contents
 
@@ -15,6 +16,7 @@ This project is my personal website built to showcase who I am and what I do. It
 
 ## Backlog
 
+- Add more tasks here
 - ~~Add not-found.js page~~
 - Provide light/dark mode toggle
 - Make elements draggable
