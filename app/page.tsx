@@ -12,7 +12,7 @@ export default function Home() {
 	return (
 		<div className="flex flex-col gap-4 sm:min-h-[calc(100dvh-6rem)] sm:justify-between">
 			<header>
-				<h1 className="text-2xl text-darkgray dark:text-lightgray">Benjamin Pfleghaar.</h1>
+				<h1 className="text-darkgray dark:text-lightgray text-2xl">Benjamin Pfleghaar.</h1>
 				<p className="text-2xl">Web Developer with a strong back&shy;ground in UX Design. Open to new pro&shy;jects starting {getCurrentMonthAndYear()}.</p>
 			</header>
 			<main>
