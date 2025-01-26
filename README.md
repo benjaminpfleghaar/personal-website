@@ -16,7 +16,6 @@ share my social links. The layout includes a playful twist with interactive elem
 
 ## Backlog
 
-- Add more tasks here
 - ~~Add not-found.js page~~
 - Provide light/dark mode toggle
 - Make elements draggable
