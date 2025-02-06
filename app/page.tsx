@@ -6,8 +6,6 @@ const months = ["January", "February", "March", "April", "May", "June", "July", 
 export default function Home() {
 	const getCurrentMonthAndYear = () => {
 		const date = new Date();
-		console.log(date);
-		console.log(months[(date.getMonth() + 1) % 12]);
 		return `${months[(date.getMonth() + 1) % 12]} ${date.getFullYear()}`;
 	};
 
