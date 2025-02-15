@@ -27,6 +27,12 @@ export default function LegalNotice() {
 					<br />
 					E-Mail: info@benjaminpfleghaar.com
 				</p>
+				<h2>Umsatzsteuer-ID</h2>
+				<p>
+					Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:
+					<br />
+					DE266651766
+				</p>
 				<h2>Verbraucher&shy;streit&shy;beilegung/Universal&shy;schlichtungs&shy;stelle</h2>
 				<p>Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
 				<p>Quelle: https://www.e-recht24.de</p>
