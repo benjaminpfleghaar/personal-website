@@ -12,6 +12,9 @@ export const metadata: Metadata = {
 		default: "Benjamin Pfleghaar",
 	},
 	description: "Web Developer with a strong background in UX Design",
+	openGraph: {
+		title: "Benjamin Pfleghaar",
+	},
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
