@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 	description: "Web Developer with a strong background in UX Design",
 	openGraph: {
 		title: "Benjamin Pfleghaar",
+		siteName: "Benjamin Pfleghaar",
 	},
 };
 
