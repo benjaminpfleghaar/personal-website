@@ -1,6 +1,8 @@
 import Link from "next/link";
 import MatterEngine from "./engine";
 
+export const dynamic = "force-dynamic";
+
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 export default function Home() {
