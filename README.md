@@ -1,39 +1,19 @@
 # Personal Website
 
-This project is my personal website built to showcase who I am and what I do. It’s designed to present my projects and
-share my social links. The layout includes a playful twist with interactive elements for users to play around.
-
-## Table of Contents
-
-1. [Design](#design)
-2. [Backlog](#backlog)
-3. [Dependencies](#dependencies)
-4. [Tech Stack](#tech-stack)
-
-## Design
+My personal website built with **Next.js** to showcase projects and share social links, featuring playful interactive
+elements for users to explore.
 
 ![Mockup](./assets/mockup.jpg)
 
-## Backlog
+## Features
 
-- ~~Add not-found.js page~~
-- Provide light/dark mode toggle
-- Make elements draggable
+- **Dark Mode:** Automatically adapts to system settings
+- **Physics Engine:** Adds realistic gravity-based interactions
 
-## Dependencies
+## Technologies
 
-- next
-- react-use
-- react-dom
-- matter-js
-- react
+This project is built with:
 
-## Tech Stack
-
-- VSC
-- GitHub
-- Next.js
-- TypeScript
-- Tailwind
-- React
-- HTML
+- **Framework**: [Next.js](https://nextjs.org)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com)
+- **Physics**: [Matter.js](https://brm.io/matter-js/)
