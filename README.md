@@ -26,7 +26,7 @@ Next.js personal site showcasing projects and social links, featuring playful in
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/benjaminpfleghaar/mintly.git
+    git clone https://github.com/benjaminpfleghaar/personal-website.git
     ```
 
 2. Install dependencies:
