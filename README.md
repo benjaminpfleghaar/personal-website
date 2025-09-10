@@ -1,7 +1,6 @@
 # Personal Website
 
-My personal website built with **Next.js** to showcase projects and share social links, featuring playful interactive
-elements for users to explore.
+Next.js personal site showcasing projects and social links, featuring playful interactive elements for exploration.
 
 ![Mockup](./assets/mockup.jpg)
 
@@ -12,8 +11,32 @@ elements for users to explore.
 
 ## Technologies
 
-This project is built with:
+- **Framework:** [Next.js](https://nextjs.org)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com)
+- **Physics:** [Matter.js](https://brm.io/matter-js/)
 
-- **Framework**: [Next.js](https://nextjs.org)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com)
-- **Physics**: [Matter.js](https://brm.io/matter-js/)
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org) installed
+
+### Installation
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/benjaminpfleghaar/mintly.git
+    ```
+
+2. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+3. Run the development server:
+
+    ```bash
+    npm run dev
+    ```
