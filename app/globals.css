@@ -27,7 +27,7 @@
     }
 
     body {
-        @apply max-w-(--breakpoint-md) bg-[cornflowerblue] p-8 font-medium text-foreground sm:p-12 dark:text-background;
+        @apply max-w-(--breakpoint-md) bg-background p-8 font-medium text-foreground sm:p-12 dark:bg-foreground dark:text-background;
     }
 }
 

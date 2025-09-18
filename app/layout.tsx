@@ -1,6 +1,6 @@
 import "./globals.css";
+import { Metadata } from "next";
 import { Geist } from "next/font/google";
-import { Metadata, Viewport } from "next";
 
 const geistSans = Geist({
 	subsets: ["latin"],
@@ -16,10 +16,6 @@ export const metadata: Metadata = {
 		title: "Benjamin Pfleghaar",
 		siteName: "Benjamin Pfleghaar",
 	},
-};
-
-export const viewport: Viewport = {
-	themeColor: "cornflowerblue",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
